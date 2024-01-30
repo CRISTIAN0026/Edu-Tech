@@ -14,7 +14,7 @@ const typeDefs = gql(
   fs.readFileSync("./src/graphql/schema/typeDefs.graphql", "utf-8")
 );
 
-const MONGODB = process.env.DB_URI;
+const MONGODB = process.env.DB_URI || "mongodb+srv://cristianpaez009:pRURi8SB4f8JknFr@apolloserversetup.mdtll1a.mongodb.net/?retryWrites=true&w=majority";
 
 const app = express();
 

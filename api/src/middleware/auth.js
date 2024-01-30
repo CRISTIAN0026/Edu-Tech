@@ -9,7 +9,7 @@ const authMiddleware = (req, _, next) => {
       req.user = null;
       next();
     } else {
-      const decodedUser = jwt.verify(token, process.env.SECRET_KEY);
+      const decodedUser = jwt.verify(token, process.env.SECRET_KEY || "UNSAFE_STRING");
       req.user = decodedUser;
       next();
     }
