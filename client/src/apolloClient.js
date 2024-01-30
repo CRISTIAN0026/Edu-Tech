@@ -3,7 +3,7 @@ import { setContext } from "@apollo/client/link/context";
 
 
 const httpLink = new HttpLink({
-  uri: "https://edu-tech-backend-hrv5obzbh-cristian0026.vercel.app/",
+  uri: "http://localhost:4000/",
 });
 
 const authLink =  setContext((_, { headers }) => {
