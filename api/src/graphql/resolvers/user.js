@@ -11,6 +11,8 @@ const SUBSCRIPTION_EVENTS = {
   PERSON_LOGIN: 'PERSON_LOGIN'
 }
 
+const key = process.env.SECRET_KEY || "UNSAFE_STRING"
+
 const Mutation = {
   async registerUser(_, { registerInput: { username, email, password, type }}, context) {
     const oldUser = await User.findOne({ email });
